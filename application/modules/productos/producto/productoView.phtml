@@ -1,0 +1,609 @@
+    <!-- -------------------------------------General------------------------------------------------ -->
+    <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                <i class="nav-icon fas fa-users"></i>
+                    Mantenimiento — Productos General
+                </h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="tab_agregar" data-toggle="pill" href="#mantenimiento_agrega_producto" role="tab" aria-controls="custom-content-below-home" aria-selected="true"><i class="fas fa-plus"></i> Agregar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="tab_modificar" data-toggle="pill" href="#mantenimiento_actualizar_producto" role="tab" aria-controls="custom-content-below-profile" aria-selected="false"><i class="fas fa-edit"></i> Actualizar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="tab_eliminar" data-toggle="pill" href="#mantenimiento_eliminar_producto" role="tab" aria-controls="custom-content-below-messages" aria-selected="false"><i class="fas fa-minus"></i> Eliminar</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="custom-content-below-tabContent">
+                    <div class="tab-pane fade show active" id="mantenimiento_agrega_producto" role="tabpanel" aria-labelledby="custom-content-below-home-tab">
+
+                        <!-- form-group -->
+                        <div class="form-group">
+                            <form>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="descripcion_producto_general">Descripción</label>
+                                        <input type="text" class="form-control" id="descripcion_producto_general" placeholder="Ingrese la descripción del Producto">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tipo_producto_general">Tipo de Producto</label>
+                                        <select class="form-control" id="tipo_producto_general">
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="marca_producto_general">Marca de Producto</label>
+                                        <select class="form-control" id="marca_producto_general">
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="modelo_producto_general">Modelo de Producto</label>
+                                        <select class="form-control" id="modelo_producto_general">
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="precio_producto_general">Precio</label>
+                                        <input type="text" class="form-control" id="precio_producto_general" placeholder="Ingrese el precio del Producto">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="publicar_producto_general">Publicar</label>
+                                        <select class="form-control" id="publicar_producto_general">
+                                            <option value="S">Si</option>
+                                            <option value="N">No</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="concepto_producto_general">Concepto</label>
+                                        <textarea class="form-control" id="concepto_producto_general" rows="3" placeholder="Ingrese el concepto del Producto"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        
+                                        
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">Seleccione una Imagen</div>
+                                            <div class="panel-body" align="center">
+                                                <input type="file" name="upload_image" id="upload_image" /><br />
+                                                <div id="uploaded_image"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div id="uploadimageModal" class="modal" role="dialog">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h3 class="modal-title">Cortar Imagen</h3>    
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-md-12 text-center">
+                                                            <center><div id="image_demo" style="width:450px; margin-top:10px"></div></center>
+                                                        </div>
+                                                        <div class="col-md-12" style="padding-top:5px;">
+                                                            <center><button class="btn btn-success crop_image">Dar Formato</button></center>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    </div>
+                                    <br>
+                                    <button type="button" id="agregar_producto_general" class="btn btn-primary">Ingresar</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- /.form-group -->
+        
+                    </div>
+                    <div class="tab-pane fade" id="mantenimiento_actualizar_producto" role="tabpanel" aria-labelledby="custom-content-below-profile-tab">
+
+                        <!-- form-group -->
+                        <div class="form-group">
+                            <form>
+                                <div class="card-body">
+                                <div class="form-group">
+                                        <label for="a_id_producto_general">ID</label>
+                                        <input type="text" class="form-control" id="a_id_producto_general" placeholder="Ingrese el ID del Producto">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="a_descripcion_producto_general">Descripción</label>
+                                        <input type="text" class="form-control" id="a_descripcion_producto_general" placeholder="Descripción del Producto">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="a_tipo_producto_general">Tipo de Producto</label>
+                                        <select class="form-control" id="a_tipo_producto_general">
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="a_marca_producto_general">Marca de Producto</label>
+                                        <select class="form-control" id="a_marca_producto_general">
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="a_modelo_producto_general">Modelo de Producto</label>
+                                        <select class="form-control" id="a_modelo_producto_general">
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="a_precio_producto_general">Precio</label>
+                                        <input type="text" class="form-control" id="a_precio_producto_general" placeholder="Precio del Producto">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="a_publicar_producto_general">Publicar</label>
+                                        <select class="form-control" id="a_publicar_producto_general">
+                                            <option value="S">Si</option>
+                                            <option value="N">No</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="a_concepto_producto_general">Concepto</label>
+                                        <textarea class="form-control" id="a_concepto_producto_general" rows="3" placeholder="Concepto del Producto"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="a_estado_producto_general">Estado</label>
+                                        <select class="form-control" id="a_estado_producto_general">
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        
+                                        <div class="panel panel-default">
+                                                <div class="panel-heading">Seleccione una Imagen</div>
+                                                <div class="panel-body" align="center">
+                                                    <input type="file" name="a_upload_image" id="a_upload_image" /><br />
+                                                    <div id="a_uploaded_image"></div>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            <div id="a_uploadimageModal" class="modal" role="dialog">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h3 class="modal-title">Cortar Imagen</h3>    
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <div class="col-md-12 text-center">
+                                                                <center><div id="a_image_demo" style="width:450px; margin-top:10px"></div></center>
+                                                            </div>
+                                                            <div class="col-md-12" style="padding-top:5px;">
+                                                                <center><button class="btn btn-success a_crop_image">Dar Formato</button></center>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <br>
+                                    <button type="button" id="actualizar_producto_general" class="btn btn-primary">Actualizar</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- /.form-group -->
+
+                    </div>
+                    <div class="tab-pane fade" id="mantenimiento_eliminar_producto" role="tabpanel" aria-labelledby="custom-content-below-messages-tab">
+
+                        <!-- form-group -->
+                        <div class="form-group">
+                            <form>
+                                <div class="card-body">
+                                <div class="form-group">
+                                        <label for="e_id_producto_general">ID</label>
+                                        <input type="text" class="form-control" id="e_id_producto_general" placeholder="Ingrese el ID del Producto">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="e_descripcion_producto_general">Descripción</label>
+                                        <input type="text" class="form-control" id="e_descripcion_producto_general" placeholder="Descripción del Producto">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="e_tipo_producto_general">Tipo de Producto</label>
+                                        <select class="form-control" id="e_tipo_producto_general">
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="e_marca_producto_general">Marca de Producto</label>
+                                        <select class="form-control" id="e_marca_producto_general">
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="e_modelo_producto_general">Modelo de Producto</label>
+                                        <select class="form-control" id="e_modelo_producto_general">
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="e_precio_producto_general">Precio</label>
+                                        <input type="text" class="form-control" id="e_precio_producto_general" placeholder="Precio del Producto">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="e_publicar_producto_general">Publicar</label>
+                                        <select class="form-control" id="e_publicar_producto_general">
+                                            <option value="S">Si</option>
+                                            <option value="N">No</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="e_concepto_producto_general">Concepto</label>
+                                        <textarea class="form-control" id="e_concepto_producto_general" rows="3" placeholder="Concepto del Producto"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="e_estado_producto_general">Estado</label>
+                                        <select class="form-control" id="e_estado_producto_general">
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputFile">Imagen</label>
+                                        <div id="e_uploaded_image"></div>
+                                    </div>
+                                    <br>
+                                    <button type="button" id="eliminar_producto_general" class="btn btn-primary">Eliminar</button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- /.form-group -->
+
+                    </div>
+                </div>
+                <div class="tab-custom-content">
+                    <p class="lead mb-0">MyGameTime</p>
+                </div>
+            </div>
+        <!-- /.card -->
+        </div>
+        <!-- /.card -->
+    
+    <!-- ---------------------Marca--------------------------------------- -->
+    <div class="card card-primary card-outline">
+        <div class="card-header">
+            <h3 class="card-title">
+            <i class="nav-icon fas fa-users"></i>
+                Mantenimiento — Marca
+            </h3>
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+        </div>
+        <div class="card-body">
+            <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="tab_agregar" data-toggle="pill" href="#mantenimiento_agregar" role="tab" aria-controls="custom-content-below-home" aria-selected="true"><i class="fas fa-plus"></i> Agregar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="tab_modificar" data-toggle="pill" href="#custom-content-below-profile" role="tab" aria-controls="custom-content-below-profile" aria-selected="false"><i class="fas fa-edit"></i> Actualizar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="custom-content-below-messages-tab" data-toggle="pill" href="#custom-content-below-messages" role="tab" aria-controls="custom-content-below-messages" aria-selected="false"><i class="fas fa-minus"></i> Eliminar</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="custom-content-below-tabContent">
+                <div class="tab-pane fade show active" id="mantenimiento_agregar" role="tabpanel" aria-labelledby="custom-content-below-home-tab">
+
+                <!-- form-group -->
+                <div class="form-group">
+                    <form>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="descripcion_marca">Descripción</label>
+                                <input type="text" class="form-control" id="descripcion_marca" placeholder="Ingrese la Marca">
+                            </div>
+                            <br>
+                            <button type="button" id="aceptar_marca" class="btn btn-primary">Ingresar</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.form-group -->
+    
+                </div>
+            <div class="tab-pane fade" id="custom-content-below-profile" role="tabpanel" aria-labelledby="custom-content-below-profile-tab">
+
+                <!-- form-group actualizar-->
+                <div class="form-group">
+                    <form>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="a_id_marca">ID</label>
+                                <input type="text" class="form-control" id="a_id_marca" placeholder="Ingrese el ID">
+                            </div>
+                            <div class="form-group">
+                                <label for="a_descripcion_marca">Descripción</label>
+                                <input type="text" class="form-control" id="a_descripcion_marca" placeholder="Ingrese la Marca">
+                            </div>
+                            <div class="form-group">
+                                <label for="a_estado_marca">Estado</label>
+                                <select class="form-control" id="a_estado_marca">
+                                    
+                                </select>
+                            </div>
+                            <br>
+                            <button type="button" id="actualizar_marca" class="btn btn-primary">Actualizar</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.form-group -->
+
+            </div>
+            <div class="tab-pane fade" id="custom-content-below-messages" role="tabpanel" aria-labelledby="custom-content-below-messages-tab">
+
+                <!-- form-group actualizar-->
+                <div class="form-group">
+                    <form>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="e_id_marca">ID</label>
+                                <input type="text" class="form-control" id="e_id_marca" placeholder="Ingrese el ID">
+                            </div>
+                            <div class="form-group">
+                                <label for="e_descripcion_marca">Descripción</label>
+                                <input type="text" class="form-control" id="e_descripcion_marca" placeholder="Ingrese la Marca">
+                            </div>
+                            <div class="form-group">
+                                <label for="e_estado_marca">Estado</label>
+                                <select class="form-control" id="e_estado_marca">
+                                    
+                                </select>
+                            </div>
+                            <br>
+                            <button type="button" id="eliminar_marca" class="btn btn-primary">Eliminar</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- /.form-group -->
+
+            </div>
+            </div>
+            <div class="tab-custom-content">
+                <p class="lead mb-0">MyGameTime</p>
+            </div>
+        </div>
+        <!-- /.card -->
+        </div>
+        <!-- /.card -->
+
+        <!-- -------------------------------------Modelo------------------------------------------------ -->
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                <i class="nav-icon fas fa-users"></i>
+                    Mantenimiento — Modelo
+                </h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="tab_agregar" data-toggle="pill" href="#mantenimiento_agrega_modelo" role="tab" aria-controls="custom-content-below-home" aria-selected="true"><i class="fas fa-plus"></i> Agregar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="tab_modificar" data-toggle="pill" href="#mantenimiento_actualizar_modelo" role="tab" aria-controls="custom-content-below-profile" aria-selected="false"><i class="fas fa-edit"></i> Actualizar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="custom-content-below-messages-tab" data-toggle="pill" href="#mantenimiento_eliminar_modelo" role="tab" aria-controls="custom-content-below-messages" aria-selected="false"><i class="fas fa-minus"></i> Eliminar</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="custom-content-below-tabContent">
+                    <div class="tab-pane fade show active" id="mantenimiento_agrega_modelo" role="tabpanel" aria-labelledby="custom-content-below-home-tab">
+
+                    <!-- form-group -->
+                    <div class="form-group">
+                        <form>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="descripcion_modelo">Descripción</label>
+                                    <input type="text" class="form-control" id="descripcion_modelo" placeholder="Ingrese la Descripción">
+                                </div>
+                                <br>
+                                <button type="button" id="aceptar_modelo" class="btn btn-primary">Ingresar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.form-group -->
+        
+                    </div>
+                <div class="tab-pane fade" id="mantenimiento_actualizar_modelo" role="tabpanel" aria-labelledby="custom-content-below-profile-tab">
+
+                    <!-- form-group actualizar-->
+                    <div class="form-group">
+                        <form>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="a_id_modelo">ID</label>
+                                    <input type="text" class="form-control" id="a_id_modelo" placeholder="Ingrese el ID">
+                                </div>
+                                <div class="form-group">
+                                    <label for="a_descripcion_modelo">Descripción</label>
+                                    <input type="text" class="form-control" id="a_descripcion_modelo" placeholder="Ingrese la descripción del Modelo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="a_estado_modelo">Estado</label>
+                                    <select class="form-control" id="a_estado_modelo">
+                                        
+                                    </select>
+                                </div>
+                                <br>
+                                <button type="button" id="actualizar_modelo" class="btn btn-primary">Actualizar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.form-group -->
+
+                </div>
+                <div class="tab-pane fade" id="mantenimiento_eliminar_modelo" role="tabpanel" aria-labelledby="custom-content-below-messages-tab">
+
+                    <!-- form-group actualizar-->
+                    <div class="form-group">
+                        <form>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="e_id_modelo">ID</label>
+                                    <input type="text" class="form-control" id="e_id_modelo" placeholder="Ingrese el ID">
+                                </div>
+                                <div class="form-group">
+                                    <label for="e_descripcion_modelo">Descripción</label>
+                                    <input type="text" class="form-control" id="e_descripcion_modelo" placeholder="Ingrese la descripción del Modelo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="e_estado_modelo">Estado</label>
+                                    <select class="form-control" id="e_estado_modelo">
+                                        
+                                    </select>
+                                </div>
+                                <br>
+                                <button type="button" id="eliminar_modelo" class="btn btn-primary">Eliminar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.form-group -->
+
+                </div>
+                </div>
+                <div class="tab-custom-content">
+                    <p class="lead mb-0">MyGameTime</p>
+                </div>
+            </div>
+        <!-- /.card -->
+        </div>
+        <!-- /.card -->
+
+        <!-- -------------------------------------Tipo------------------------------------------------ -->
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <h3 class="card-title">
+                <i class="nav-icon fas fa-users"></i>
+                    Mantenimiento — Tipo de Producto
+                </h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="tab_agregar" data-toggle="pill" href="#mantenimiento_agrega_tipo" role="tab" aria-controls="custom-content-below-home" aria-selected="true"><i class="fas fa-plus"></i> Agregar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="tab_modificar" data-toggle="pill" href="#mantenimiento_actualizar_tipo" role="tab" aria-controls="custom-content-below-profile" aria-selected="false"><i class="fas fa-edit"></i> Actualizar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="custom-content-below-messages-tab" data-toggle="pill" href="#mantenimiento_eliminar_tipo" role="tab" aria-controls="custom-content-below-messages" aria-selected="false"><i class="fas fa-minus"></i> Eliminar</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="custom-content-below-tabContent">
+                    <div class="tab-pane fade show active" id="mantenimiento_agrega_tipo" role="tabpanel" aria-labelledby="custom-content-below-home-tab">
+
+                    <!-- form-group -->
+                    <div class="form-group">
+                        <form>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="descripcion_tipo">Descripción</label>
+                                    <input type="text" class="form-control" id="descripcion_tipo" placeholder="Ingrese la descripción del tipo de producto">
+                                </div>
+                                <br>
+                                <button type="button" id="aceptar_tipo" class="btn btn-primary">Ingresar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.form-group -->
+        
+                    </div>
+                <div class="tab-pane fade" id="mantenimiento_actualizar_tipo" role="tabpanel" aria-labelledby="custom-content-below-profile-tab">
+
+                    <!-- form-group actualizar-->
+                    <div class="form-group">
+                        <form>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="a_id_tipo">ID</label>
+                                    <input type="text" class="form-control" id="a_id_tipo" placeholder="Ingrese el ID">
+                                </div>
+                                <div class="form-group">
+                                    <label for="a_descripcion_tipo">Descripción</label>
+                                    <input type="text" class="form-control" id="a_descripcion_tipo" placeholder="Ingrese la descripción del tipo de producto">
+                                </div>
+                                <div class="form-group">
+                                    <label for="a_estado_tipo">Estado</label>
+                                    <select class="form-control" id="a_estado_tipo">
+                                        
+                                    </select>
+                                </div>
+                                <br>
+                                <button type="button" id="actualizar_tipo" class="btn btn-primary">Actualizar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.form-group -->
+
+                </div>
+                <div class="tab-pane fade" id="mantenimiento_eliminar_tipo" role="tabpanel" aria-labelledby="custom-content-below-messages-tab">
+
+                    <!-- form-group actualizar-->
+                    <div class="form-group">
+                        <form>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="e_id_tipo">ID</label>
+                                    <input type="text" class="form-control" id="e_id_tipo" placeholder="Ingrese el ID">
+                                </div>
+                                <div class="form-group">
+                                    <label for="e_descripcion_tipo">Descripción</label>
+                                    <input type="text" class="form-control" id="e_descripcion_tipo" placeholder="Ingrese la descripción del tipo de producto">
+                                </div>
+                                <div class="form-group">
+                                    <label for="e_estado_tipo">Estado</label>
+                                    <select class="form-control" id="e_estado_tipo">
+                                        
+                                    </select>
+                                </div>
+                                <br>
+                                <button type="button" id="eliminar_tipo" class="btn btn-primary">Eliminar</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.form-group -->
+
+                </div>
+                </div>
+                <div class="tab-custom-content">
+                    <p class="lead mb-0">MyGameTime</p>
+                </div>
+            </div>
+        <!-- /.card -->
+        </div>
+        <!-- /.card -->
+
+
+
+        

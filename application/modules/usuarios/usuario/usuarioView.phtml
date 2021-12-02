@@ -1,0 +1,118 @@
+        <div class="card card-primary card-outline">
+          <div class="card-header">
+            <h3 class="card-title">
+              <i class="nav-icon fas fa-users"></i>
+                Mantenimiento — Usuarios
+            </h3>
+          </div>
+          <div class="card-body">
+            <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="tab_agregar" data-toggle="pill" href="#mantenimiento_agregar" role="tab" aria-controls="custom-content-below-home" aria-selected="true"><i class="fas fa-plus"></i> Agregar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="tab_modificar" data-toggle="pill" href="#custom-content-below-profile" role="tab" aria-controls="custom-content-below-profile" aria-selected="false"><i class="fas fa-edit"></i> Actualizar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="custom-content-below-messages-tab" data-toggle="pill" href="#custom-content-below-messages" role="tab" aria-controls="custom-content-below-messages" aria-selected="false"><i class="fas fa-minus"></i> Eliminar</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="custom-content-below-tabContent">
+                <div class="tab-pane fade show active" id="mantenimiento_agregar" role="tabpanel" aria-labelledby="custom-content-below-home-tab">
+
+                <!-- form-group -->
+                  <div class="form-group">
+                    <form>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="descripcion">Descripción</label>
+                                <input type="text" class="form-control" id="descripcion" placeholder="Ingrese la descripción del usuario">
+                            </div>
+                            <div class="form-group">
+                                <label for="usuario">Usuario</label>
+                                <input type="text" class="form-control" id="usuario" placeholder="Ingrese un nombre de usuario">
+                            </div>
+                            <div class="form-group">
+                                <label for="clave_acceso">Contraseña</label>
+                                <input type="password" class="form-control" id="clave_acceso" placeholder="Ingrese una contraseña">
+                            </div>
+                            <br>
+                            <button type="button" id="aceptar" class="btn btn-primary">Ingresar</button>
+                        </div>
+                    </form>
+                  </div>
+                <!-- /.form-group -->
+    
+                </div>
+              <div class="tab-pane fade" id="custom-content-below-profile" role="tabpanel" aria-labelledby="custom-content-below-profile-tab">
+
+                <!-- form-group -->
+                <div class="form-group">
+                    <form>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="id_usuario">ID</label>
+                                <input type="text" class="form-control" id="id_usuario" placeholder="Ingrese ID">
+                            </div>
+                            <div class="form-group">
+                                <label for="a_descripcion">Descripción</label>
+                                <input type="text" class="form-control" id="a_descripcion" placeholder="Descripción del usuario">
+                            </div>
+                            <div class="form-group">
+                                <label for="a_usuario">Usuario</label>
+                                <input type="text" class="form-control" id="a_usuario" placeholder="Nombre de usuario">
+                            </div>
+                            <div class="form-group">
+                                <label for="a_clave_acceso">Contraseña</label>
+                                <input type="password" class="form-control" id="a_clave_acceso" placeholder="Contraseña">
+                            </div>
+                            <div class="form-group">
+                              <label for="a_estado_usuario">Estado</label>
+                              <select class="form-control" id="a_estado_usuario">
+                                
+                              </select>
+                            </div>
+                            <br>
+                            <button type="button" id="actualizar" class="btn btn-primary">Actualizar</button>
+                        </div>
+                    </form>
+                  </div>
+                <!-- /.form-group -->
+
+              </div>
+              <div class="tab-pane fade" id="custom-content-below-messages" role="tabpanel" aria-labelledby="custom-content-below-messages-tab">
+                <!-- form-group -->
+                <div class="form-group">
+                    <form>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="e_id_usuario">ID</label>
+                                <input type="text" class="form-control" id="e_id_usuario" placeholder="ID">
+                            </div>
+                            <div class="form-group">
+                                <label for="e_descripcion">Descripción</label>
+                                <input type="text" class="form-control" id="e_descripcion" placeholder="Descripción del usuario">
+                            </div>
+                            <div class="form-group">
+                                <label for="e_usuario">Usuario</label>
+                                <input type="text" class="form-control" id="e_usuario" placeholder="Usuario">
+                            </div>
+                            <div class="form-group">
+                                <label for="e_clave_acceso">Contraseña</label>
+                                <input type="password" class="form-control" id="e_clave_acceso" placeholder="Contraseña">
+                            </div>
+                            <br>
+                            <button type="button" id="eliminar_usuario" class="btn btn-primary">Eliminar</button>
+                        </div>
+                    </form>
+                  </div>
+                <!-- /.form-group -->
+              </div>
+            </div>
+            <div class="tab-custom-content">
+              <p class="lead mb-0">MyGameTime</p>
+            </div>
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- /.card -->
